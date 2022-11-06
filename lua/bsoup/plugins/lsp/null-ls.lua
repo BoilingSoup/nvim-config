@@ -15,7 +15,7 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.gofmt,
 		formatting.goimports,
-		diagnostics.eslint_d,
+		-- diagnostics.eslint_d,
 		diagnostics.golangci_lint,
 	},
 	-- configure format on save
