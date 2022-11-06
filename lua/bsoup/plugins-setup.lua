@@ -32,6 +32,7 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("navarasu/onedark.nvim")
+	use("BoilingSoup/fruitypebbles.nvim")
 	use("szw/vim-maximizer") -- maximizes and restores window splits
 	use("tpope/vim-surround")
 	use("numToStr/Comment.nvim")
