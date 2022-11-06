@@ -1,6 +1,6 @@
 local setup, null_ls = pcall(require, "null-ls")
 if not setup then
-  return
+	return
 end
 
 local formatting = null_ls.builtins.formatting
@@ -10,12 +10,15 @@ local diagnostics = null_ls.builtins.diagnostics
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
-  sources = {
-    formatting.prettier,
-    formatting.stylua,
-    diagnostics.eslint_d
-  },
-  -- configure format on save
+	sources = {
+		formatting.prettier,
+		formatting.stylua,
+		formatting.gofmt,
+		formatting.goimports,
+		diagnostics.eslint_d,
+		diagnostics.golangci_lint,
+	},
+	-- configure format on save
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
