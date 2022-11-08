@@ -15,6 +15,7 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.gofmt,
 		formatting.goimports,
+		formatting.phpcsfixer,
 		-- diagnostics.eslint_d,
 		diagnostics.golangci_lint,
 	},

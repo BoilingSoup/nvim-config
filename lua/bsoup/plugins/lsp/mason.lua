@@ -12,9 +12,8 @@ end
 
 local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
 if not mason_null_ls_status then
-  return
+	return
 end
-
 
 -- enable mason
 mason.setup()
@@ -27,25 +26,26 @@ mason_lspconfig.setup({
 		"cssls",
 		"tailwindcss",
 		"sumneko_lua",
-    "astro",
-    "bashls",
-    "clangd",
-    "dockerls",
-    "emmet_ls",
-    "golangci_lint_ls",
-    "gopls",
-    "intelephense",
-    "pyright",
-    "yamlls"
+		"astro",
+		"bashls",
+		"clangd",
+		"dockerls",
+		"emmet_ls",
+		"golangci_lint_ls",
+		"gopls",
+		"intelephense",
+		"pyright",
+		"yamlls",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
 })
 
 mason_null_ls.setup({
-  ensure_installed = {
-    "prettier",
-    "stylua",
-    "eslint_d",
-  }
+	ensure_installed = {
+		"prettier",
+		"stylua",
+		"eslint_d",
+		"php-cs-fixer",
+	},
 })
