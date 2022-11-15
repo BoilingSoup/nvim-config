@@ -160,6 +160,11 @@ lspconfig["yamlls"].setup({
 })
 
 lspconfig["jdtls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["black"].setup({
 	capaabilities = capabilities,
 	on_attach = on_attach,
 })

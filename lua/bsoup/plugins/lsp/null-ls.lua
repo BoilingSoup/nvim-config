@@ -16,6 +16,7 @@ null_ls.setup({
 		formatting.gofmt,
 		formatting.goimports,
 		formatting.phpcsfixer,
+		formatting.black,
 		-- diagnostics.eslint_d,
 		diagnostics.golangci_lint,
 	},
