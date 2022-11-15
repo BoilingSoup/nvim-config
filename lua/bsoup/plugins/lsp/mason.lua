@@ -49,5 +49,6 @@ mason_null_ls.setup({
 		"eslint_d",
 		"php-cs-fixer",
 		"black",
+		"blade-formatter",
 	},
 })

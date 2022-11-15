@@ -4,6 +4,14 @@ if not status then
 	return
 end
 
+local ft_to_parser_status, ft_to_parser = pcall(require, "nvim-treesitter.parsers")
+if not ft_to_parser_status then
+	return
+end
+
+-- highlight blade.php like html
+ft_to_parser.filetype_to_parsername.blade = "html"
+
 -- configure treesitter
 treesitter.setup({
 	-- enable syntax highlighting
