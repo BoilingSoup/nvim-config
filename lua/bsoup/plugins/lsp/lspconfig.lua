@@ -165,6 +165,6 @@ lspconfig["jdtls"].setup({
 })
 
 lspconfig["black"].setup({
-	capaabilities = capabilities,
+	capabilities = capabilities,
 	on_attach = on_attach,
 })
