@@ -18,6 +18,7 @@ null_ls.setup({
 		formatting.phpcsfixer,
 		formatting.black,
 		formatting.blade_formatter,
+
 		-- diagnostics.eslint_d,
 		diagnostics.golangci_lint,
 	},
