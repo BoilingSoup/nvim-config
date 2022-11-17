@@ -16,6 +16,7 @@ require("bsoup.plugins.treesitter")
 require("bsoup.plugins.gitsigns")
 require("bsoup.plugins.toggleterm")
 require("bsoup.plugins.bufferline")
+require("bsoup.plugins.neoscroll")
 
 require("bsoup.plugins.rainbow-brackets")
 require("bsoup.core.colorscheme")
