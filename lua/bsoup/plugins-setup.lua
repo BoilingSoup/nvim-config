@@ -36,7 +36,7 @@ return packer.startup(function(use)
 	use("BoilingSoup/fruitypebbles.nvim")
 	use("szw/vim-maximizer") -- maximizes and restores window splits
 	use("tpope/vim-surround")
-	use("numToStr/Comment.nvim")
+	use({ "numToStr/Comment.nvim", branch = "jsx" })
 	use("nvim-tree/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
