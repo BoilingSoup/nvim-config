@@ -19,7 +19,7 @@ null_ls.setup({
 		formatting.black,
 		formatting.blade_formatter,
 
-		-- diagnostics.eslint_d,
+		diagnostics.eslint_d,
 		diagnostics.golangci_lint,
 	},
 	-- configure format on save
@@ -41,4 +41,5 @@ null_ls.setup({
 			})
 		end
 	end,
+	root_dir = require("null-ls.utils").root_pattern(".null-ls-root", "Makefile", ".git", "go.mod"),
 })

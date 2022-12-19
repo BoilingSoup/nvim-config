@@ -21,10 +21,10 @@ nvimtree.setup({
 		enable = false,
 	},
 
-	filters = {
-		custom = { ".git" },
-		exclude = { ".gitignore" },
-	},
+	-- filters = {
+	-- 	custom = { ".git" },
+	-- 	exclude = { ".gitignore" },
+	-- },
 
 	update_cwd = true,
 

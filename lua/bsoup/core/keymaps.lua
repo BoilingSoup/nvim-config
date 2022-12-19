@@ -2,8 +2,23 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "jk", "<ESC>:w<CR>")
-keymap.set("i", "kj", "<ESC>")
+-- shorten timeoutlen only for jk | kj <Esc> without effecting other keybinds
+-- jk saves, kj does not
+vim.cmd([[
+  let g:esc_j_lasttime = 0
+  let g:esc_k_lasttime = 0
+  function! JKescape(key)
+    if a:key=='j' | let g:esc_j_lasttime = reltimefloat(reltime()) | endif
+    if a:key=='k' | let g:esc_k_lasttime = reltimefloat(reltime()) | endif
+    let l:timediff = abs(g:esc_j_lasttime - g:esc_k_lasttime)
+    return (l:timediff <= 0.1 && l:timediff >=0.001) ? a:key=='k' ? "\b\e:w\<CR>" : "\b\e" : a:key
+  endfunction
+  inoremap <expr> j JKescape('j')
+  inoremap <expr> k JKescape('k')
+]])
+
+-- keymap.set("i", "jk", "<ESC>:w<CR>")
+-- keymap.set("i", "kj", "<ESC>")
 
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 

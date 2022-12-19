@@ -65,6 +65,7 @@ end
 lspconfig["html"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	filetypes = { "html", "template" },
 })
 
 -- configure typescript server with plugin
