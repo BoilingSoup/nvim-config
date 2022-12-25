@@ -78,6 +78,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
 	use({ "p00f/nvim-ts-rainbow", after = "nvim-treesitter" })
+	use({ "RRethy/vim-illuminate", after = "nvim-treesitter" })
 
 	use("lewis6991/gitsigns.nvim")
 
