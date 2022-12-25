@@ -9,8 +9,9 @@ if not ft_to_parser_status then
 	return
 end
 
--- highlight blade.php like html
-ft_to_parser.filetype_to_parsername.blade = "html"
+-- highlight these like html
+ft_to_parser.filetype_to_parsername.blade = "html" -- blade.php
+ft_to_parser.filetype_to_parsername.template = "html" -- .tmpl
 
 -- configure treesitter
 treesitter.setup({
